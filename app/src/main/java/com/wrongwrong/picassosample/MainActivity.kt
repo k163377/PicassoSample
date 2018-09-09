@@ -11,9 +11,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Picasso.get()
+                //いらすとやの画像URL
                 .load("https://1.bp.blogspot.com/-kwMHBpDRC98/WMfCOCDhmCI/AAAAAAABClk/0YhKPlx69H8akEluJniMmVV-RoJCRtPvACLcB/s800/onsei_ninshiki_smartphone.png")
-                .resize(300, 300)
-                .centerCrop()
-                .into(imageView)
+                .resize(300, 300) //表示サイズ指定
+                .centerCrop() //resizeで指定した範囲になるよう中央から切り出し
+                .into(imageView) //imageViewに流し込み
     }
 }
